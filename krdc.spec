@@ -101,7 +101,16 @@ based on KRDC.
 
 %prep
 %autosetup -p1
-%cmake_kde5
+%cmake_kde5 || :
+if ! [ -e build.ninja ]; then
+	echo cmake failed
+	echo CMakeOutput.log:
+	echo ================
+	cat CMakeFiles/CMakeOutput.log
+	echo CMakeError.log:
+	echo ===============
+	cat CMakeFiles/CMakeError.log
+fi
 
 %build
 %ninja -C build
