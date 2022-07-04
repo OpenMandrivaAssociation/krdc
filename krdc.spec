@@ -15,8 +15,6 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		krdc-19.04.2-menuentry.patch
 BuildRequires:	pkgconfig(libvncserver)
-# Implicit dep of libvncserver
-BuildRequires:	pkgconfig(libsasl2)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5Config)
