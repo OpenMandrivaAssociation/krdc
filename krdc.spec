@@ -1,6 +1,6 @@
 Summary:	KDE Remote Desktop Client
 Name:		krdc
-Version:	22.08.0
+Version:	22.08.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
