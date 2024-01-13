@@ -39,8 +39,10 @@ BuildRequires:  cmake(Qt6Qml)
 BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:  qt6-qtbase-theme-gtk3
+BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	freerdp >= 1.0.2
+BuildRequires:	cmake(FreeRDP)
 Requires:	freerdp >= 1.0.2
 Conflicts:	kde4-filesharing < 3:4.8.0
 
