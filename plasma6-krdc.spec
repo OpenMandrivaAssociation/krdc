@@ -1,17 +1,17 @@
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
 Version:	24.01.90
-Release:	3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/krdc-%{version}.tar.xz
+Source0:	https//download.kde.org/%{ftpdir}/release-service/%{version}/src/krdc-%{version}.tar.xz
 Patch0:		krdc-19.04.2-menuentry.patch
 BuildRequires:	pkgconfig(libvncserver)
 BuildRequires:	cmake(ECM)
@@ -25,6 +25,7 @@ BuildRequires:	cmake(KF6Bookmarks)
 BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6Completion)
+BuildRequires:	cmake(KF6StatusNotifierItem)
 BuildRequires:	cmake(KF6Wallet)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6NotifyConfig)
@@ -34,6 +35,10 @@ BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6WindowSystem)
+BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
+BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	freerdp >= 1.0.2
 Requires:	freerdp >= 1.0.2
