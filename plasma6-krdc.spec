@@ -1,9 +1,9 @@
-%define git 20240218
+#define git 20240218
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
-Version:	24.01.96
+Version:	24.02.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -17,7 +17,7 @@ Url:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/network/krdc/-/archive/%{gitbranch}/krdc-%{gitbranchd}.tar.bz2#/krdc-%{git}.tar.bz2
 %else
-Source0:	https//download.kde.org/%{ftpdir}/release-service/%{version}/src/krdc-%{version}.tar.xz
+Source0:	https://download.kde.org/%{ftpdir}/release-service/%{version}/src/krdc-%{version}.tar.xz
 %endif
 Patch0:		krdc-19.04.2-menuentry.patch
 BuildRequires:	pkgconfig(libvncserver)
