@@ -1,6 +1,6 @@
 Summary:	KDE Remote Desktop Client
 Name:		krdc
-Version:	23.08.5
+Version:	24.02.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -35,6 +35,7 @@ BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(FreeRDP)
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	freerdp >= 1.0.2
 Requires:	freerdp >= 1.0.2
@@ -55,7 +56,6 @@ compatible server. VNC and RDP are supported.
 %{_datadir}/config.kcfg/krdc.kcfg
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml
 %{_datadir}/qlogging-categories5/krdc.categories
-%{_datadir}/kio/servicemenus/smb2rdc.desktop
 
 #----------------------------------------------------------------------------
 

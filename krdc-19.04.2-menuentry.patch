@@ -1,7 +1,7 @@
-diff -up krdc-22.08.3/org.kde.krdc.desktop.1~ krdc-22.08.3/org.kde.krdc.desktop
---- krdc-22.08.3/org.kde.krdc.desktop.1~	2022-10-30 22:24:07.000000000 +0100
-+++ krdc-22.08.3/org.kde.krdc.desktop	2022-11-03 17:14:14.307255675 +0100
-@@ -4,66 +4,63 @@ Type=Application
+diff -up krdc-24.02.0/org.kde.krdc.desktop.1~ krdc-24.02.0/org.kde.krdc.desktop
+--- krdc-24.02.0/org.kde.krdc.desktop.1~	2024-02-19 04:31:08.000000000 +0100
++++ krdc-24.02.0/org.kde.krdc.desktop	2024-02-29 21:56:12.389188130 +0100
+@@ -4,67 +4,63 @@ Type=Application
  Exec=krdc -qwindowtitle %c %u
  Icon=krdc
  Terminal=false
@@ -24,6 +24,7 @@ diff -up krdc-22.08.3/org.kde.krdc.desktop.1~ krdc-22.08.3/org.kde.krdc.desktop
 -Name[fr]=KRDC
 -Name[ga]=KRDC
 -Name[gl]=KRDC
+-Name[he]=KRDC
 -Name[hne]=केआरडीसी
 -Name[hr]=KRDC
 -Name[hu]=KRDC
@@ -125,7 +126,7 @@ diff -up krdc-22.08.3/org.kde.krdc.desktop.1~ krdc-22.08.3/org.kde.krdc.desktop
  GenericName=Remote Desktop Client
  GenericName[ar]=عميل سطح المكتب البعيد
  GenericName[bg]=Отдалечен работен плот
-@@ -165,4 +162,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
+@@ -171,4 +167,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
  X-DocPath=krdc/index.html
  StartupWMClass=krdc
  MimeType=x-scheme-handler/vnc;x-scheme-handler/rdp
