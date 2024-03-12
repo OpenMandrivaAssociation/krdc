@@ -1,6 +1,10 @@
 #define git 20240218
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
+
+%define krdccore_major 5
+%define libkrdccore %mklibname krdccore
+
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
 Version:	24.02.0
@@ -45,13 +49,12 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:  cmake(Qt6Qml)
 BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6QmlNetwork)
-BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	freerdp >= 1.0.2
 BuildRequires:	cmake(FreeRDP)
 Requires:	freerdp >= 1.0.2
-Conflicts:	kde4-filesharing < 3:4.8.0
+Requires:	%{libkrdccore} = %{EVRD}
 
 %description
 KDE Remote Desktop Client is a client application that allows you to view
@@ -71,13 +74,9 @@ compatible server. VNC and RDP are supported.
 
 #----------------------------------------------------------------------------
 
-%define krdccore_major 5
-%define libkrdccore %mklibname krdccore %{krdccore_major}
-
 %package -n %{libkrdccore}
 Summary:	Shared library for KRDC
 Group:		System/Libraries
-Obsoletes:	%{_lib}krdccore1 < 3:4.10.1
 
 %description -n %{libkrdccore}
 Shared library for KRDC.
