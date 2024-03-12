@@ -1,3 +1,7 @@
+%define krdccore_major 5
+%define oldlibkrdccore %mklibname krdccore %{krdccore_major}
+%define libkrdccore %mklibname krdccore-qt5
+
 Summary:	KDE Remote Desktop Client
 Name:		krdc
 Version:	24.02.0
@@ -39,7 +43,7 @@ BuildRequires:	cmake(FreeRDP)
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	freerdp >= 1.0.2
 Requires:	freerdp >= 1.0.2
-Conflicts:	kde4-filesharing < 3:4.8.0
+Requires:	%{libkrdccore} = %{EVRD}
 
 %description
 KDE Remote Desktop Client is a client application that allows you to view
@@ -58,14 +62,10 @@ compatible server. VNC and RDP are supported.
 %{_datadir}/qlogging-categories5/krdc.categories
 
 #----------------------------------------------------------------------------
-
-%define krdccore_major 5
-%define libkrdccore %mklibname krdccore %{krdccore_major}
-
 %package -n %{libkrdccore}
 Summary:	Shared library for KRDC
 Group:		System/Libraries
-Obsoletes:	%{_lib}krdccore1 < 3:4.10.1
+%rename %{oldlibkrdccore}
 
 %description -n %{libkrdccore}
 Shared library for KRDC.
@@ -76,13 +76,12 @@ Shared library for KRDC.
 
 #----------------------------------------------------------------------------
 
-%define devkrdccore %mklibname krdccore -d
+%define devkrdccore %mklibname krdccore-qt5 -d
 
 %package -n %{devkrdccore}
 Summary:	Development for KRDC
 Group:		Development/KDE and Qt
 Requires:	%{libkrdccore} = %{EVRD}
-Conflicts:	kdenetwork4-devel < 3:4.11.0
 Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{devkrdccore}
