@@ -4,8 +4,8 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		krdc
-Version:	24.02.0
-Release:	2
+Version:	24.02.1
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -18,6 +18,7 @@ Url:		http://www.kde.org
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		krdc-19.04.2-menuentry.patch
+Patch1:		ae05b83ce36ca675c74006c772d9c30de46d96b9.diff
 BuildRequires:	pkgconfig(libvncserver)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
@@ -39,10 +40,8 @@ BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:	cmake(FreeRDP)
+BuildRequires:	cmake(FreeRDP) < 3.0
 BuildRequires:	pkgconfig(libssh)
-BuildRequires:	freerdp >= 1.0.2
-Requires:	freerdp >= 1.0.2
 Requires:	%{libkrdccore} = %{EVRD}
 
 %description
