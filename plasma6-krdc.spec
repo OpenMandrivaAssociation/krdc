@@ -7,7 +7,7 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
-Version:	24.02.1
+Version:	24.02.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -24,7 +24,6 @@ Source0:	https://invent.kde.org/network/krdc/-/archive/%{gitbranch}/krdc-%{gitbr
 Source0:	https://download.kde.org/%{ftpdir}/release-service/%{version}/src/krdc-%{version}.tar.xz
 %endif
 Patch0:		krdc-19.04.2-menuentry.patch
-Patch1:		ae05b83ce36ca675c74006c772d9c30de46d96b9.diff
 BuildRequires:	pkgconfig(libvncserver)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6DocTools)
