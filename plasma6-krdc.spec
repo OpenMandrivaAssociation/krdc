@@ -7,7 +7,7 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
-Version:	24.08.0
+Version:	24.08.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
