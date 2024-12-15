@@ -1,6 +1,6 @@
-diff -up krdc-24.08.0/org.kde.krdc.desktop.1~ krdc-24.08.0/org.kde.krdc.desktop
---- krdc-24.08.0/org.kde.krdc.desktop.1~	2024-08-16 00:16:23.000000000 +0200
-+++ krdc-24.08.0/org.kde.krdc.desktop	2024-08-23 15:37:22.382956901 +0200
+diff -up krdc-24.12.0/org.kde.krdc.desktop.1~ krdc-24.12.0/org.kde.krdc.desktop
+--- krdc-24.12.0/org.kde.krdc.desktop.1~	2024-12-03 00:50:36.000000000 +0100
++++ krdc-24.12.0/org.kde.krdc.desktop	2024-12-15 04:21:51.344859815 +0100
 @@ -4,67 +4,63 @@ Type=Application
  Exec=krdc -qwindowtitle %c %u
  Icon=krdc
@@ -129,6 +129,6 @@ diff -up krdc-24.08.0/org.kde.krdc.desktop.1~ krdc-24.08.0/org.kde.krdc.desktop
 @@ -172,4 +168,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
  X-DocPath=krdc/index.html
  StartupWMClass=krdc
- MimeType=x-scheme-handler/vnc;x-scheme-handler/rdp
+ MimeType=x-scheme-handler/vnc;x-scheme-handler/rdp;application/x-krdc;
 -Categories=Qt;KDE;Network;RemoteAccess;
 +Categories=Qt;KDE;Network;RemoteAccess;X-KDE-More;

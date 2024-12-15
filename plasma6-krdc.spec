@@ -7,8 +7,8 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
-Version:	24.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	24.12.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -69,6 +69,7 @@ compatible server. VNC and RDP are supported.
 %{_datadir}/config.kcfg/krdc.kcfg
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml
 %{_datadir}/qlogging-categories6/krdc.categories
+%{_datadir}/mime/packages/org.kde.krdc-mime.xml
 
 #----------------------------------------------------------------------------
 
