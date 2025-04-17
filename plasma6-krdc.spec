@@ -7,8 +7,8 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		plasma6-krdc
-Version:	24.12.3
-Release:	%{?git:0.%{git}.}3
+Version:	25.04.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -51,7 +51,7 @@ BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	pkgconfig(libssh)
-BuildRequires:	cmake(FreeRDP) < 3.0
+BuildRequires:	cmake(FreeRDP) >= 3.0
 Requires:	%{libkrdccore} = %{EVRD}
 
 %description
@@ -70,6 +70,7 @@ compatible server. VNC and RDP are supported.
 %{_datadir}/metainfo/org.kde.krdc.appdata.xml
 %{_datadir}/qlogging-categories6/krdc.categories
 %{_datadir}/mime/packages/org.kde.krdc-mime.xml
+%{_datadir}/icons/hicolor/scalable/apps/krdc.svg
 
 #----------------------------------------------------------------------------
 
