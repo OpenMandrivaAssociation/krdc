@@ -51,6 +51,7 @@ BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(PlasmaActivities)
 BuildRequires:	pkgconfig(libssh)
+BuildRequires:	pkgconfig(fuse3)
 BuildRequires:	cmake(FreeRDP) >= 3.0
 Requires:	%{libkrdccore} = %{EVRD}
 
