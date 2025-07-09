@@ -6,7 +6,7 @@
 %define libkrdccore %mklibname krdccore
 
 Summary:	KDE Remote Desktop Client
-Name:		plasma6-krdc
+Name:		krdc
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
