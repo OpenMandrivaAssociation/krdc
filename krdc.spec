@@ -7,7 +7,7 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		krdc
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -55,12 +55,18 @@ BuildRequires:	pkgconfig(fuse3)
 BuildRequires:	cmake(FreeRDP) >= 3.0
 Requires:	%{libkrdccore} = %{EVRD}
 
+%rename plasma6-krdc
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+#BuildOption:	-DQT_MAJOR_VERSION=6
+
 %description
 KDE Remote Desktop Client is a client application that allows you to view
 or even control the desktop session on another machine that is running a
 compatible server. VNC and RDP are supported.
 
-%files -f krdc.lang
+%files -f %{name}.lang
 %dir %{_libdir}/qt6/plugins/krdc
 %dir %{_libdir}/qt6/plugins/krdc/kcms
 %{_bindir}/krdc
@@ -104,28 +110,3 @@ based on KRDC.
 %{_includedir}/krdccore_export.h
 %{_includedir}/krdc
 %{_libdir}/libkrdccore.so
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n krdc-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja || :
-if ! [ -e build.ninja ]; then
-	echo cmake failed
-	echo CMakeOutput.log:
-	echo ================
-	cat CMakeFiles/CMakeOutput.log
-	echo CMakeError.log:
-	echo ===============
-	cat CMakeFiles/CMakeError.log
-fi
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang krdc --with-html
