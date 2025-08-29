@@ -1,12 +1,13 @@
-diff -up krdc-25.04.0/org.kde.krdc.desktop.1~ krdc-25.04.0/org.kde.krdc.desktop
---- krdc-25.04.0/org.kde.krdc.desktop.1~	2025-04-10 05:11:32.000000000 +0200
-+++ krdc-25.04.0/org.kde.krdc.desktop	2025-04-17 20:12:34.100252810 +0200
-@@ -4,68 +4,63 @@ Type=Application
+diff -up krdc-25.08.0/org.kde.krdc.desktop.1~ krdc-25.08.0/org.kde.krdc.desktop
+--- krdc-25.08.0/org.kde.krdc.desktop.1~	2025-08-07 23:07:51.000000000 +0200
++++ krdc-25.08.0/org.kde.krdc.desktop	2025-08-30 00:51:04.579493818 +0200
+@@ -4,69 +4,68 @@ Type=Application
  Exec=krdc -qwindowtitle %c %u
  Icon=krdc
  Terminal=false
 -Name=KRDC
 -Name[ar]=كردس
+-Name[az]=KRDC
 -Name[bg]=KRDC
 -Name[bs]=KRDC
 -Name[ca]=KRDC
@@ -69,15 +70,17 @@ diff -up krdc-25.04.0/org.kde.krdc.desktop.1~ krdc-25.04.0/org.kde.krdc.desktop
 -Name[zh_TW]=遠端桌面_KRDC
 +Name=KRDC Remote Desktop Client
 +Name[ar]=KRDC عميل سطح المكتب البعيد
++Name[az]=KRDC İş masasının uzaqdan idarə olunması
 +Name[bg]=KRDC Отдалечен работен плот
 +Name[bs]=KRDC Klijent udaljene radne površine
 +Name[ca]=KRDC Client d'escriptori remot
 +Name[ca@valencia]=KRDC Client d'escriptori remot
 +Name[cs]=KRDC Klient vzdálené pracovní plochy
 +Name[da]=KRDC Klient til fjernskrivebord
-+Name[de]=KRDC Verbindung zu entferntem Rechner
++Name[de]=KRDC - Verbindung zu entferntem Rechner
 +Name[el]=KRDC Πελάτης απομακρυσμένης επιφάνειας εργασίας
 +Name[en_GB]=KRDC Remote Desktop Client
++Name[eo]=KRDC Kliento por fora labortablo
 +Name[es]=KRDC Cliente de escritorio remoto
 +Name[et]=KRDC Kaugtöölaua klient
 +Name[eu]=KRDC Urruneko mahaigainaren bezeroa
@@ -85,6 +88,7 @@ diff -up krdc-25.04.0/org.kde.krdc.desktop.1~ krdc-25.04.0/org.kde.krdc.desktop
 +Name[fr]=KRDC Connexion à un bureau distant
 +Name[ga]=KRDC Cliant Deisce Cianda
 +Name[gl]=KRDC Cliente de escritorio remoto
++Name[he]=KRDC לקוח שולחן עבודה מרוחק
 +Name[hne]=KRDC रिमोट डेस्कटाप क्लाएंट
 +Name[hr]=KRDC Klijent za udaljeno povezivanje
 +Name[hu]=KRDC Távoli asztal kliens
@@ -92,23 +96,25 @@ diff -up krdc-25.04.0/org.kde.krdc.desktop.1~ krdc-25.04.0/org.kde.krdc.desktop
 +Name[is]=KRDC Tengingar við fjarlæg skjáborð
 +Name[it]=KRDC Client per connessione a desktop remoto
 +Name[ja]=KRDC リモートデスクトップクライアント
++Name[ka]=KRDC დისტანციური სამუშაო მაგიდის კლიენტი
 +Name[kk]=KRDC Қашықтан үстелге қосылу клиенті
 +Name[km]=KRDC កម្មវិធី​មើល​ផ្ទៃតុ​ពី​ចម្ងាយ
 +Name[ko]=KRDC 원격 데스크톱 클라이언트
-+Name[lt]=KRDC Nutolusio darbastalio klientas
-+Name[lv]=KRDC Attālinātās darbvirsmas klients
++Name[lt]=KRDC Nuotolinio darbalaukio kliento programa
++Name[lv]=KRDC Attālās darbvirsmas klients
 +Name[ml]=KRDC വിദൂര പണിയിട ക്ലയന്റ്
 +Name[mr]=KRDC दूरस्थ डेस्कटॉप ग्राहक
 +Name[nb]=KRDC Tilkobling til annet skrivebord
 +Name[nds]=KRDC Schriefdisch-Feernverbinnen
 +Name[nl]=KRDC Client voor verbinding met extern bureaublad
-+Name[nn]=KRDC Skrivebordssamband over nettverket
-+Name[pa]=KRDC ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਟ
++Name[nn]=KRDC Tilkopling til eksternt skrivebord
++Name[pa]=KRCC ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਟ
 +Name[pl]=KRDC Klient zdalnego dostępu do pulpitu
-+Name[pt]=KRDC Cliente de Ecrãs Remotos
++Name[pt]=KRCC Cliente de Ecrãs Remotos
 +Name[pt_BR]=KRDC Cliente de área de trabalho remota
 +Name[ro]=KRDC Client pentru birou la distanță
 +Name[ru]=KRDC Удалённый доступ к рабочему столу
++Name[sa]=KRDC दूरस्थ डेस्कटॉप क्लायन्ट
 +Name[si]=KRDC දුරස්ථ වැඩතල යෙදුම
 +Name[sk]=KRDC Klient vzdialenej pracovnej plochy
 +Name[sl]=KRDC Odjemalec za oddaljena namizja
@@ -126,8 +132,8 @@ diff -up krdc-25.04.0/org.kde.krdc.desktop.1~ krdc-25.04.0/org.kde.krdc.desktop
 +Name[zh_TW]=KRDC 遠端桌面用戶端
  GenericName=Remote Desktop Client
  GenericName[ar]=عميل سطح المكتب البعيد
- GenericName[bg]=Отдалечен работен плот
-@@ -176,4 +171,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
+ GenericName[az]=İş masasının uzaqdan idarə olunması
+@@ -179,4 +178,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
  X-DocPath=krdc/index.html
  StartupWMClass=krdc
  MimeType=x-scheme-handler/vnc;x-scheme-handler/rdp;application/x-krdc;

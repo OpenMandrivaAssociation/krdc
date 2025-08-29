@@ -7,7 +7,7 @@
 
 Summary:	KDE Remote Desktop Client
 Name:		krdc
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
