@@ -1,8 +1,8 @@
-diff -up krdc-25.08.1/org.kde.krdc.desktop.1~ krdc-25.08.1/org.kde.krdc.desktop
---- krdc-25.08.1/org.kde.krdc.desktop.1~	2025-09-09 06:19:41.000000000 +0200
-+++ krdc-25.08.1/org.kde.krdc.desktop	2025-09-13 00:33:54.234685214 +0200
+diff -up krdc-25.12.0/org.kde.krdc.desktop.cmake.1~ krdc-25.12.0/org.kde.krdc.desktop.cmake
+--- krdc-25.12.0/org.kde.krdc.desktop.cmake.1~	2025-12-03 23:58:24.000000000 +0100
++++ krdc-25.12.0/org.kde.krdc.desktop.cmake	2025-12-16 17:40:28.240417692 +0100
 @@ -4,68 +4,68 @@ Type=Application
- Exec=krdc -qwindowtitle %c %u
+ Exec=@CMAKE_INSTALL_PREFIX@/bin/krdc -qwindowtitle %c %u
  Icon=krdc
  Terminal=false
 -Name=KRDC
@@ -132,9 +132,10 @@ diff -up krdc-25.08.1/org.kde.krdc.desktop.1~ krdc-25.08.1/org.kde.krdc.desktop
  GenericName=Remote Desktop Client
  GenericName[ar]=عميل سطح المكتب البعيد
  GenericName[az]=İş masasının uzaqdan idarə olunması
-@@ -176,4 +176,4 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
+@@ -176,5 +176,5 @@ Comment[zh_TW]=以 RDP 或 VNC 連線到
  X-DocPath=krdc/index.html
  StartupWMClass=krdc
  MimeType=x-scheme-handler/vnc;x-scheme-handler/rdp;application/x-krdc;
 -Categories=Qt;KDE;Network;RemoteAccess;
 +Categories=Qt;KDE;Network;RemoteAccess;X-KDE-More;
+ X-KDE-Wayland-Interfaces=org_kde_kwin_keystate
